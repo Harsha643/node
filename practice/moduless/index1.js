@@ -99,8 +99,6 @@ let serve=http.createServer(async (req,res)=>{
        res.write(`<div class="container" style=" width="300px" "><img src="${element.image}"  width="300px"/> <h1>${element.title}</h1>  <h1>${element.price}</h1>  <h2>${element.category}</h2> <h2>${element.rating.rate}</h2> <p>${element.description}</p>   </div> `)
        return element
                     }
-
-       
         });
         res.write(JSON.stringify(women))
         res.end()
@@ -112,5 +110,33 @@ let serve=http.createServer(async (req,res)=>{
 
 })
 serve.listen(3004,()=>{
+    console.log("its running")
+})
+
+let servew=http.createServer(async (req,res)=>{
+
+
+    try{
+        let response=await fetch("https://fakestoreapi.com/products")
+        let data=await response.json()
+        // console.log(data)
+        let women=data.filter(element => {
+            // console.log(element)
+                    if(element.category==="jewelery")
+                        {
+       res.write(`<div class="container" style=" width="300px" "><img src="${element.image}"  width="300px"/> <h1>${element.title}</h1>  <h1>${element.price}</h1>  <h2>${element.category}</h2> <h2>${element.rating.rate}</h2> <p>${element.description}</p>   </div> `)
+       return element
+                    }
+        });
+        res.write(JSON.stringify(women))
+        res.end()
+
+    }
+    catch(err){
+        console.log(err)
+    }
+
+})
+servew.listen(3005,()=>{
     console.log("its running")
 })
