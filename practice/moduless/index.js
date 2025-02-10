@@ -1,2 +1,4 @@
 const a=40
-module.exports=a
+module.exports={
+    a
+}

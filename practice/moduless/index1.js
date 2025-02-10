@@ -1,10 +1,7 @@
 
 let http=require("http")
-// let fun=require("./class.js")
-// console.log(fun())
 
 let server=http.createServer(async (req,res)=>{
-
 
     try{
         let response=await fetch("https://fakestoreapi.com/products")
@@ -19,9 +16,6 @@ let server=http.createServer(async (req,res)=>{
        res.write(`<div class="container" style=" width="300px" "><img src="${element.image}"  width="300px"/> <h1>${element.title}</h1>  <h1>${element.price}</h1>  <h2>${element.category}</h2> <h2>${element.rating.rate}</h2> <p>${element.description}</p>   </div> `)
        return element
                     }
-
-                
-       
         });
         res.write(JSON.stringify(men))
                 res.end()
@@ -35,6 +29,11 @@ let server=http.createServer(async (req,res)=>{
 server.listen(3001,()=>{
     console.log("its running")
 })
+
+
+
+
+
 
 
 let servers=http.createServer(async (req,res)=>{
@@ -68,13 +67,20 @@ servers.listen(3002,()=>{
 })
 
 
+
+
+
+
+
 // var http = require("http");
+
 // var generateOTP = require("./class.js")
 // // console.log(generateOTP)
 // var server = http.createServer((req,res)=>{
 //     // var generateOTP = require("./class.js")
 
 //     res.write(generateOTP)
+//     // res.write(<h1>harsha</h1>)
 //     res.end()
 // });
 
@@ -112,6 +118,15 @@ let serve=http.createServer(async (req,res)=>{
 serve.listen(3004,()=>{
     console.log("its running")
 })
+
+
+
+
+
+
+
+
+
 
 let servew=http.createServer(async (req,res)=>{
 
