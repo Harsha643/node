@@ -9,9 +9,7 @@ let server=http.createServer(async (req,res)=>{
         // console.log(data)
         let men=data.filter(element => {
             // console.log(element)
-                    if(element.category==="men's clothing")
-
-                        {
+                    if(element.category==="men's clothing"){
                            
        res.write(`<div class="container" style=" width="300px" "><img src="${element.image}"  width="300px"/> <h1>${element.title}</h1>  <h1>${element.price}</h1>  <h2>${element.category}</h2> <h2>${element.rating.rate}</h2> <p>${element.description}</p>   </div> `)
        return element
