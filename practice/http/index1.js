@@ -24,8 +24,6 @@
                 <p style="display:"none"">${ele.description}</p>
                 `
                 containerf.append(fake)
-                
-                
             })
 
 
@@ -46,9 +44,6 @@
         
          
             res.quotes.forEach(element => {
-            
-
-
                 console.log(element) 
                 let  subcontainer=document.createElement("div")
                 subcontainer.className="list"
