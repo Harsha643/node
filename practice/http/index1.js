@@ -5,8 +5,11 @@
             containerf.id="containers"
         
         get.addEventListener("click", async ()=>{
+        // let container=document.createElement("div")
+        // container.style.display="none"
+
             
-            let data= await fetch("http://localhost:30001/")
+            let data= await fetch("https://server-g8jm.onrender.com/products")
             let res=await data.json()
             console.log(res)
            
@@ -39,7 +42,10 @@
 
 
         post.addEventListener("click",async()=>{
-            let data= await fetch("http://localhost:30001/",{method:"POST"})
+
+            // containerf.style.display="none"
+
+            let data= await fetch("https://server-g8jm.onrender.com/quotes",{method:"POST"})
             let res=await data.json()
         
          

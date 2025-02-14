@@ -29,20 +29,22 @@
 
 
 
+
+
+
+
 let http=require("http")
-
-
 let server=http.createServer( async(req,res)=>{
     res.setHeader('Content-Type', 'application/json'); 
-    console.log(req.method)
-if(req.method=="GET"){
+    // console.log(req.url)
+if(req.method=="GET" && req.url==="/products"){
 
     let response=  await fetch("https://fakestoreapi.com/products")
     let data=await response.json()
     res.write(JSON.stringify(data))
     
 
-}else if(req.method=="POST"){
+}else if(req.method=="POST" &&  req.url==="/quotes"){
     let rrw=  await fetch("https://dummyjson.com/quotes")
     let d=await rrw.json()
  res.write(JSON.stringify(d))
