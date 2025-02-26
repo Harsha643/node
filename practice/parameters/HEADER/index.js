@@ -9,6 +9,7 @@ let server=http.createServer((req,res)=>{
         res.end("hello")
     }
 })
+
 server.listen(3004,()=>{
     console.log("it running")
 })
