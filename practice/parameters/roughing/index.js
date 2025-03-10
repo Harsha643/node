@@ -10,7 +10,7 @@ let http=require("http")
 
     let response= await fetch("https://fakestoreapi.com/products")
     let data= await response.json()
-if()
+
 
 
   res.write(JSON.stringify(data))

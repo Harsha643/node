@@ -6,12 +6,10 @@ let server=http.createServer((req,res)=>{
 let body=""
     req.on("data",(chunk)=>{
         body+=chunk
-
-
     })
     req.on("end",()=>{
         console.log(body)
-        fs.writeFile("index.txt",body,(err)=>{
+        fs.writeFile("db.json",body,(err)=>{
             if(err){
                 res.write(err.message)
                 res.end()
