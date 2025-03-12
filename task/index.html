@@ -7,8 +7,7 @@
 </head>
 <body>
     <h2>Employee Manager</h2>
-    
-    <!-- Hidden input for storing ID during edit -->
+
     <input type="hidden" id="editEmpId"> 
     
     <input type="text" id="inputName" placeholder="Employee Name">
@@ -62,6 +61,7 @@
             if (!confirm("Are you sure you want to delete this employee?")) return;
 
             await fetch(`http://localhost:3000/emp/${id}`, { method: "DELETE" });
+            
             fetchEmp();
         }
 
