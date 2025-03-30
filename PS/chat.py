@@ -13,7 +13,7 @@ def print_unique_with_underscores(numbers_str):
     result = []
     for num in unique_numbers:
         result.append(num)
-        result.extend([" "] * (numbers.count(num) - 1))
+        result.extend(["_"] * (numbers.count(num) - 1))
     print(result)
 
 
@@ -31,11 +31,10 @@ Output:
 
 """
 
-def problem2(numbers):
- 
-    unique_numbers = set(numbers)
-    print(len(unique_numbers))
-
-
-numbers2 = [1, 11, 2, 20, 2, 3, 3]
-problem2(numbers2)
+def remove_duplicates(numbers):
+  
+    unique_numbers = list(set(numbers))
+    return unique_numbers
+numbers1 = [1,11,2,20,2,3,3]
+unique_list1 = remove_duplicates(numbers1)
+print(unique_list1)

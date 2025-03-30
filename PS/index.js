@@ -139,7 +139,9 @@ let arrofstr = ["a", "ccc", "dddd", "bb"];
 function sort(arrofstr){
 for (let i = 0; i < arrofstr.length - 1; i++) {
   for (let j = 0; j < arrofstr.length - i - 1; j++) {
+
     if (arrofstr[j].length > arrofstr[j + 1].length) {
+        
       let temp = arrofstr[j];
       arrofstr[j] = arrofstr[j + 1];
       arrofstr[j + 1] = temp;
@@ -149,7 +151,25 @@ for (let i = 0; i < arrofstr.length - 1; i++) {
 return  arrofstr
 }
 console.log(sort(arrofstr));
+
+
 // console.log(arrofstr);
+
+  
+// 33. Count occurrence of number:
+
+// Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+// Output: 7 present 2 times.
+
+function find(arrnum){
+    console.log(arrnum)
+
+}
+let arrnum=prompt("enter the number ").split()
+let findNum=+prompt("enter the number ")
+
+
+find(arrnum)
 
 
 

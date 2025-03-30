@@ -14,7 +14,11 @@ const getData = () => {
     return JSON.parse(fs.readFileSync(filePath, "utf-8"));
 };
 
-const saveData = (data) => fs.writeFileSync(filePath, JSON.stringify(data,null,2));
+const saveData = (data) => {
+    fs.writeFileSync(filePath, JSON.stringify(data,null,2));
+}
+
+
 
 const server = http.createServer((req, res) => {
 
@@ -36,6 +40,10 @@ const server = http.createServer((req, res) => {
 
 
     const dataStore = getData();
+    // const dataStore ={
+    //     "emp":[]
+    // }
+
     
     // console.log(parsedUrl)
 
