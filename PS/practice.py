@@ -155,4 +155,71 @@ for i in arr:
         unq.remove(i)
 print(unq)
     
+# Reverse a String
+#       "hello" → "olleh"
+# Write a function to reverse a given string.
+
+str1=input("enter the string : ")
+
+def str2(str1):
+    revstr=''
+    for i in range(len(str1)):
+        revstr=str1[i]+revstr
+    return revstr
+print(str2(str1))
+
+
+# Check if a String is a Palindrome
+#       "racecar"  → true 
+# Write a function to check if a given string is a palindrome.
+
+
+str1=input("enter the string : ")
+
+def str2(str1):
+    revstr=''
+    for i in range(len(str1)):
+        revstr=str1[i]+revstr
+    if str1==revstr:
+        return True
+    else:
+        return False
+print(str2(str1))
+
+
+
+# Count Vowels in a String
+#       "hello world" → 3
+# Write a function to count the number of vowels in a given string.
+
+str1=input("enter : ").lower()
+str2="aeiou"
+def vow(str1,str2):
+    count=0
+    for i in range(len(str1)):
+        for j in range(len(str2)):
+            if str1[i]==str2[j]:
+                count+=1
+    return count
+
+print(vow(str1,str2))
+            
+
+
+# Remove Vowels from a String
+#       "hello world" → "hll wrld"
+# Write a function to remove all vowels from a given string.
+
+
+str1=input("enter : ").lower()
+str2="aeiou"
+def vow(str1,str2):
+    
+    for i in range(len(str1)):
+        for j in range(len(str2)):
+            if str1[i]==str2[j]:
+                count=str1.replace(str2[j],"")
+    return count
+
+print(vow(str1,str2))
             
